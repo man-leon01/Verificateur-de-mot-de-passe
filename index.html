@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Verificate Password</title>
+</head>
+<body>
+    <!-- NOTIFICATION -->
+    <p class="notif">Strong Password 👍👍👍</p>
+
+    <!-- CONTAINER -->
+    <div class="container">
+        
+        <!-- TITLE -->
+        <h2 class="title">Vérification de mot de passe</h2>
+
+        <!-- FORMULAIRE -->
+        <div class="form">
+            <div class="display-password"><ion-icon name="eye-off"></ion-icon></div>
+            <input type="password" id="password" placeholder="Entrer votre mot de passe">
+            <button type="submit" class="disable">Submit</button>
+        </div>
+
+        <!-- VERIFICATE -->
+        <div class="verificate">
+            <h4>Le mot de passe doit contenir les éléments suivants : </h4>
+            <p id="lower"><ion-icon name="close"></ion-icon> Des lettres minuscules</p>
+            <p id="upper"><ion-icon name="close"></ion-icon> Des lettres majuscules</p>
+            <p id="digit"><ion-icon name="close"></ion-icon> Des chiffres</p>
+            <p id="symbol"><ion-icon name="close"></ion-icon> Des caractères spéciaux</p>
+            <p id="len"><ion-icon name="close"></ion-icon> 8 caractères minimum</p>
+        </div> 
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script type="module" src="./app.js" defer></script>
+</body>
+</html>
