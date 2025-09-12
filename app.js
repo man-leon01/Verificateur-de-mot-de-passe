@@ -36,9 +36,6 @@ inputBox.addEventListener("keyup", (e) => {
             element.style.color = "red";
             element.querySelector("ion-icon").setAttribute("name", "close");
         })
-        setTimeout(() => {
-            verificate.style.display = "none";
-        }, 400);
         return;
     }
 
@@ -92,11 +89,14 @@ inputBox.addEventListener("keyup", (e) => {
             onetime = true;
             notif.style.display = "block";
             inputBox.value = "";
-            verificate.style.display = "none";
             submitButton.classList.remove("active");
             inputBox.type = "password";
             displayPassword.innerHTML = `<ion-icon name="eye-off"></ion-icon>`;
             displayPassword.style.color = "#c4abae";
+            verificate.querySelectorAll("p").forEach((element) => {
+            element.style.color = "red";
+            element.querySelector("ion-icon").setAttribute("name", "close");
+            })
             setTimeout(() => {
                 notif.style.display = "none";
             }, 5500)
